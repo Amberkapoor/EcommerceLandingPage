@@ -1,0 +1,238 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+body
+{
+	margin: 0;
+	font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+}
+img
+{
+	max-width: 100%;
+	display: block;
+
+}
+h1,
+h2,
+h3,
+p
+{
+  margin: 0;
+}
+section
+{
+	padding: 7em 0;
+}
+
+.container
+{
+	width: 85%;
+	margin: 0 auto;
+	max-width: 65em;
+	margin: 0 auto;
+}
+
+.split
+{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	justify-content: center;
+  }
+
+.split > *
+{
+	flex-basis: 30%;
+	min-width: 15em;
+}
+
+
+.spacing > * + * 
+{
+margin-top: var(--spacer, 2rem)
+}
+.btn
+{
+	display: inline-block;
+	text-decoration: none;
+	font-weight: 700;
+	padding: .5em 1.25em;
+	background: #0072ce;
+	color: #fff;
+	font-size: 1.125rem;
+	border-radius: .25rem;
+	text-transform: uppercase;
+	transition: transform 250ms ease-in-out, opacity 25ms linear;
+}
+
+.btn:hover,
+.btn:focus
+{
+ transform: scale(1.1);
+ opacity: .9;
+}
+
+.primary-title
+{
+	font-size: 4rem;
+	line-height: 1;
+	text-transform: uppercase;
+}
+.section-title
+{
+text-align: center;
+font-size: clamp(1rem, 2.5vw, 2rem );
+line-height: 1;
+color: #17353d;
+margin-bottom: 5rem;
+}
+
+.hero
+{
+	color: white;
+	text-align: center;
+	padding: 15em 0;
+	background: #eee;
+
+
+}
+@supports (background-blend-mode: multiply)
+{
+.hero
+{
+	color: white;
+	text-align: center;
+	padding: 15rem;
+	background-image: url(Images/shoe-3.png), radial-gradient(#444,#111);
+	background-blend-mode: multiply;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+}
+.featured 
+{
+	background: #eee;
+}
+.featured__item
+{
+	display: block;
+	position: relative;
+	transform: scale(.85);
+	transition: transform 250ms ease-in-out;
+	text-decoration: none;
+	color: #333;
+	text-align: center;
+	line-height: 2.2;
+}
+
+.featured__item:hover,.featured__item:focus
+{
+	transform: scale(1);	
+}
+.featured__item:hover .featured__details, .featured__item:focus .featured__details{
+	opacity: 1;
+	text-shadow: 0 0 2em white;
+	
+}
+.featured__item::after
+{
+	content: '';
+	top: 10%;
+  left: 10%;
+	background: #0072ce;
+	position: absolute;
+	padding: 75% 75% 0 0;
+	z-index: -1;
+	border-radius: 50%;
+
+}
+.featured__details{
+	opacity: 0;
+	transition: opacity 250ms linear;
+}
+.featured__details span{
+ 
+ display: block;
+ font-weight: 800;
+ font-size: 2.5rem;
+}
+
+.product
+{
+	background: radial-gradient(var(--clr-inner, #ff9a9e), var(--clr-outer, #fad0c4));
+	padding: 3em ;
+	border-radius: 3em;
+	margin-bottom: 3em;
+	text-align: center;
+
+}
+.product__title
+{
+	font-size: 2rem;
+	text-transform: uppercase;
+	line-height: 1;
+	color: blue;
+}
+
+.product__image
+{
+	margin: -5rem 0 0 0;
+
+}
+@media (min-width: 45em) {
+  .product {
+    text-align: left;
+    margin-bottom: 9em;
+}
+.product__image
+{
+	float: right;
+	width: 65%;
+	shape-margin: 1em;
+}
+ 
+ 
+}
+.shoe-red
+{
+	--clr-inner: #eee ;
+	--clr-outer: #0072ce;
+	 
+}
+.shoe-white
+{
+	--clr-inner: #13547a;
+	--clr-outer: #93a5cf;
+}
+.shoe-black
+{
+	--clr-inner: #13547a;
+	--clr-outer: #e4efe9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
